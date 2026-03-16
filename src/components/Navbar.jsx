@@ -92,7 +92,7 @@ const Navbar = () => {
         </a>
 
 
-        <a onClick={()=>setShowMenu(!showMenu)} href='#experience' className='relative text-white/80 transition duration-300 hover:text-purple-500 group'>
+        <a onClick={()=>setShowMenu(!showMenu)} href='#work' className='relative text-white/80 transition duration-300 hover:text-purple-500 group'>
         <span>Experience</span>
         
         </a>
