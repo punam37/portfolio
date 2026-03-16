@@ -4,6 +4,38 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaGithub, FaDribbble, FaTwitter, F
 
 
 const Contact = () => {
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+    };
+    console.log(formData)
+
+    //  const loadingId = toast.loading("Sending message...");
+
+    try {
+      const res = await fetch("https://portfolio-backend-two-lake.vercel.app/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+    //   toast.dismiss(loadingId); // remove loading toast
+
+      if (res.ok) {
+        e.target.reset();
+        alert("Message sent successfully! 🎉");
+      } else {
+        alert("Error sending message.");
+      }
+    } catch (err) {
+    //   toast.dismiss(loadingId);
+    //   toast.error("Something went wrong.");
+    }
+  };
+
   return (
    <motion.div
      initial = {{opacity:0, y:50}}
@@ -23,21 +55,21 @@ const Contact = () => {
 
 {/* contact form */}
     <div>
-        <form action="" className='space-y-6'>
+        <form onSubmit={handleSubmit} className='space-y-6'>
             <div>
                 <label htmlFor='name' className='block text-gray-300 mb-2'>Your Name</label>
-                <input type="text" 
+                <input type="text" name="name"
                 className='w-full bg-gray-800 border border-dark-400 rounded-lg px-4 py-3 outline-none'/>
             </div>
 
             <div>
                 <label htmlFor='email' className='block text-gray-300 mb-2'>Email Address</label>
-                <input type="email" 
+                <input type="email" name="email"
                 className='w-full bg-gray-800 border border-dark-400 rounded-lg px-4 py-3 outline-none'/>
             </div>
               <div>
                 <label htmlFor='message' className='block text-gray-300 mb-2'>Your Message</label>
-                <textarea type="text" 
+                <textarea type="text" name="message"
                 className='w-full h-40 bg-gray-800 border border-dark-400 rounded-lg px-4 py-3 outline-none'/>
             </div>
             <button type='submit' className='w-full px-6 py-3 bg-purple-400 rounded-lg font-medium hover:bg-purple-800 transition duration-300 cursor-pointer'>
