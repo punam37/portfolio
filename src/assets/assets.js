@@ -139,11 +139,11 @@ export const projects = [
 
 export const workData = [
   {
-    role: "Senior Frontend Developer",
+    role: "Senior Backend Developer",
     company: "TechCorp Inc.",
-    duration: "2020 - Present",
+    duration: "2026 - Present",
     description:
-      "Leading frontend development for enterprise clients, implementing modern frameworks, and mentoring junior developers.",
+      "Manages server-side logic, databases, and APIs, ensuring efficient data handling, reliability, and scalability of applications.",
     color: "purple"
   },
   {
