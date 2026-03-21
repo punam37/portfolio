@@ -140,7 +140,7 @@ export const projects = [
 export const workData = [
   {
     role: "Senior Backend Developer",
-    company: "TechCorp Inc.",
+    company: "Magical Balloons",
     duration: "2026 - Present",
     description:
       "Manages server-side logic, databases, and APIs, ensuring efficient data handling, reliability, and scalability of applications.",
@@ -148,18 +148,18 @@ export const workData = [
   },
   {
     role: "Web Developer",
-    company: "Digital Solutions LLC",
-    duration: "2018 - 2020",
+    company: "Genie soft System",
+    duration: "2023 - 2023",
     description:
-      "Developed and maintained web applications for various clients, focusing on responsive design and performance optimization.",
+      "Manages server-side logic, databases, and APIs, ensuring efficient data handling, reliability, and scalability of applications.",
     color: "pink"
   },
   {
-    role: "Junior Developer",
-    company: "StartUp Ventures",
-    duration: "2016 - 2018",
+    role: "Software Engineer",
+    company: "Geecon Systems",
+    duration: "2021 - 2023",
     description:
-      "Started my career building basic websites and gradually took on more complex projects as I expanded my skill set.",
+      "A software engineer creates and improves software solutions by writing code, solving problems, and optimizing system performance.",
     color: "blue"
   }
 ];
